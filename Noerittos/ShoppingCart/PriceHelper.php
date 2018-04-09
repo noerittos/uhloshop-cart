@@ -1,6 +1,6 @@
 <?php
 
-namespace Noerittos\ShoppingCart;
+namespace Noerittos\Cart;
 
 use Nette;
 

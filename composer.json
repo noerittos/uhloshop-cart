@@ -13,7 +13,7 @@
 
     "autoload": {
         "psr-0": {
-            "Noerittos\\ShoppingCart": "src/"
+            "Noerittos\\Cart": "src/"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Noerittos\ShoppingCart\DI;
+namespace Noerittos\Cart\DI;
 
 use Nette\DI\CompilerExtension;
 use Nette\DI\Statement;
@@ -50,10 +50,10 @@ class Extension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('cart'))
-			->setClass('Noerittos\ShoppingCart\Cart', [$config['items']]);
+			->setClass('Noerittos\Cart\Cart', [$config['items']]);
 
 		$builder->addDefinition($this->prefix('cartControlFactory'))
-			->setImplement('Noerittos\ShoppingCart\ICartControlFactory')
+			->setImplement('Noerittos\Cart\ICartControlFactory')
 			->addSetup('setShowImage', [$config['columns']['image']])
 			->addSetup('setShowName', [$config['columns']['name']])
 			->addSetup('setShowPrice', [$config['columns']['price']])
@@ -69,7 +69,7 @@ class Extension extends CompilerExtension
 
 		$priceConfig = $config['price'];
 		$builder->addDefinition($this->prefix('priceHelper'))
-			->setClass('Noerittos\ShoppingCart\PriceHelper', [
+			->setClass('Noerittos\Cart\PriceHelper', [
 				'currency' => $priceConfig['currency'],
 				'decimals' => $priceConfig['decimals'],
 				'decimalPoint' => $priceConfig['decimalPoint'],
