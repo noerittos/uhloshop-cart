@@ -6,18 +6,6 @@ use Nette\Application\UI\Control;
 use Nette\Application\UI\Form;
 
 /**
- * @method CartControl setShowImage($showImage)
- * @method CartControl setShowName($showName)
- * @method CartControl setShowPrice($showPrice)
- * @method CartControl setShowQuantity($showQuantity)
- * @method CartControl setShowTotalWithoutVat($showTotalWithoutVat)
- * @method CartControl setShowTotal($showTotal)
- * @method CartControl setShowDelete($showDelete)
- * @method CartControl setImageWidth(int $imageWidth)
- * @method CartControl setImageHeight(int $imageHeight)
- * @method CartControl setNextName(string $nextName)
- * @method CartControl setContinueName(string $continueName)
- * @method CartControl setUpdateName(string $updateName)
  *
  * @method boolean isShowImage($showImage)
  * @method boolean isShowName($showName)
@@ -160,6 +148,54 @@ class CartControl extends Control {
         foreach ($form->values as $key => $quantity) {
             $this->cart->update($key, (int) $quantity);
         }
+    }
+
+    public function setShowImage($showImage) {
+        $this->showImage = $showImage;
+    }
+
+    public function setShowName($showPrice) {
+        $this->showPrice = $showPrice;
+    }
+
+    public function setShowPrice($showPrice) {
+        $this->showPrice = $showPrice;
+    }
+
+    public function setShowQuantity($showQuantity) {
+        $this->showQuantity = $showQuantity;
+    }
+
+    public function setShowTotalWithoutVat($showQuantity) {
+        $this->showQuantity = $showQuantity;
+    }
+
+    public function setShowTotal($showTotal) {
+        //     $this->showQuantity = $showQuantity;
+    }
+
+    public function setShowDelete($showDelete) {
+        //   $this->showQuantity = $showQuantity;
+    }
+
+    public function setImageWidth(int $imageWidth) {
+        // $this->showQuantity = $showQuantity;
+    }
+
+    public function setImageHeight(int $imageHeight) {
+        // $this->showQuantity = $showQuantity;
+    }
+
+    public function setNextName(string $nextName) {
+        // $this->showQuantity = $showQuantity;
+    }
+
+    public function setContinueName(string $continueName) {
+        // $this->showQuantity = $showQuantity;
+    }
+
+    public function setUpdateName(string $updateName) {
+        // $this->showQuantity = $showQuantity;
     }
 
 }
